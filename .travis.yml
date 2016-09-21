@@ -1,15 +1,22 @@
 language: scala
 
-scala:
-   - 2.10.6
-   - 2.11.8
-   - 2.12.0-RC1
-
 script:
   - sbt ++$TRAVIS_SCALA_VERSION test
 
 jdk:
+  - oraclejdk6
   - oraclejdk8
+
+scala:
+  - 2.10.6
+  - 2.11.8
+  - 2.12.0-RC1
+
+matrix:
+  include:
+    - jdk: oraclejdk6 scala: 2.10.6
+    - jdk: oraclejdk6 scala: 2.11.8
+    - jdk: oraclejdk8 scala: 2.12.0-RC1
 
 before_cache:
   - find $HOME/.sbt -name "*.lock" | xargs rm
