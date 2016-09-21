@@ -14,9 +14,9 @@ script:
 
 matrix:
   include:
-    - jdk: oraclejdk6
+    - jdk: oraclejdk7
       scala: 2.10.6
-    - jdk: oraclejdk6
+    - jdk: oraclejdk7
       scala: 2.11.8
     - jdk: oraclejdk8
       scala: 2.12.0-RC1
