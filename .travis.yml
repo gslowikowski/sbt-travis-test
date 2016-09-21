@@ -3,14 +3,14 @@ language: scala
 script:
   - sbt ++$TRAVIS_SCALA_VERSION test
 
-jdk:
-  - oraclejdk6
-  - oraclejdk8
+#jdk:
+#  - oraclejdk6
+#  - oraclejdk8
 
-scala:
-  - 2.10.6
-  - 2.11.8
-  - 2.12.0-RC1
+#scala:
+#  - 2.10.6
+#  - 2.11.8
+#  - 2.12.0-RC1
 
 matrix:
   include:
